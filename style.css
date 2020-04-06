@@ -10,6 +10,7 @@ body {
     color: #a0cbbb;
     font-size: 30px;
     text-transform: lowercase;
+    
 }
 
 main {
@@ -87,6 +88,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 
 
