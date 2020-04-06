@@ -239,7 +239,7 @@ main {
     box-shadow: 0 0 1rem #fff;
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:800px){
     body{
         font-size: 16px;
     }
@@ -277,6 +277,25 @@ main {
     }
     .div-divider{
         width: 300px;
+    }
+
+}
+
+@media only screen and (max-width:1024px){
+
+    .navbar {
+        width: 2rem;
+        padding-right: 0.5rem;
+    }
+
+    .link-text{
+        display: none;
+    }
+
+    .sideDetail{
+        width: 15px;
+        margin-left: 1rem;
+        align-items: center;
     }
 
 }
