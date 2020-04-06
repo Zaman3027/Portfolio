@@ -213,7 +213,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .side-dot{
@@ -259,6 +259,7 @@ main {
     .sideDetail{
         width: 15px;
         margin-left: 1rem;
+        align-items: center;
     }
 
     .navbar {

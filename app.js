@@ -23,8 +23,38 @@ window.onload = function(){
     dot_four.onclick = function(e){
         onClickDot(3)
     }
-        
     function onClickDot(element){
+        listOfDots.forEach(v=>{
+            v.classList.remove('side-dot-active');
+        });
+        listOfDots[element].classList.add('side-dot-active');
+        console.log(window.pageYOffset)
+        if(element===0){
+            window.scrollTo({
+                top:window.innerHeight*0,
+                behavior:'smooth'
+            })
+        }else if(element===1){
+            window.scrollTo({
+                top:window.innerHeight,
+                behavior:'smooth'
+            })
+
+        }else if(element===2){
+            window.scrollTo({
+                top:window.innerHeight*2,
+                behavior:'smooth'
+            })
+        }else{
+            window.scrollTo({
+                top:window.innerHeight*3,
+                behavior:'smooth'
+            })
+
+        }
+    }
+        
+    function onScroll(element){
         listOfDots.forEach(v=>{
             v.classList.remove('side-dot-active');
         });
@@ -32,16 +62,16 @@ window.onload = function(){
     }
 
     window.onscroll = function(e){
-        if(window.pageYOffset<window.innerHeight*1){
-           onClickDot(0)
+        if(window.pageYOffset<window.innerHeight*1-200){
+            onScroll(0)
             
-        }else if(window.pageYOffset<window.innerHeight*2){
-            onClickDot(1)
+        }else if(window.pageYOffset<window.innerHeight*2-200){
+            onScroll(1)
     
-        }else if(window.pageYOffset<window.innerHeight*3){
-            onClickDot(2)
+        }else if(window.pageYOffset<window.innerHeight*3-200){
+            onScroll(2)
         }else{
-           onClickDot(3)
+            onScroll(3)
         }
     }
 }
